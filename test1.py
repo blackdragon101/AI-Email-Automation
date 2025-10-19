@@ -52,10 +52,10 @@ from email.mime.text import MIMEText
 import base64
 import google.generativeai as genai  # Gemini API
 
-SCOPES = ['https://www.googleapis.com/auth/gmail.send']
+SCOPES = ['your gmail api scope here']
 
 
-genai.configure(api_key="AIzaSyAJB0DNnQfGoJvGmlZovSGfSocEe3lrEgY")  
+genai.configure(api_key="your api key here")  
 
 def gmail_authenticate():
     flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
@@ -92,6 +92,7 @@ def send_emails(service, csv_path):
 if __name__ == '__main__':
     service = gmail_authenticate()
     send_emails(service, 'Book1.csv')
+
 
 
 
