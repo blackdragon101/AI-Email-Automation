@@ -5,7 +5,7 @@
 # from email.mime.text import MIMEText
 # import base64
 
-# SCOPES = ['https://www.googleapis.com/auth/gmail.send']
+# SCOPES = ['Your Gmail API scope here']
 
 # def gmail_authenticate():
 #     flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
@@ -92,6 +92,7 @@ def send_emails(service, csv_path):
 if __name__ == '__main__':
     service = gmail_authenticate()
     send_emails(service, 'Book1.csv')
+
 
 
 
